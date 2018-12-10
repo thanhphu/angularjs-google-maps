@@ -13,7 +13,7 @@
  * Example:
  *
  *  <map zoom="11" center="[41.875696,-87.624207]">
- *    <map-data load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
+ *    <map-data load-geo-json="https://thanhphu.net/_seah/google.json"></map-data>
  *   </map>
  */
 (function() {
