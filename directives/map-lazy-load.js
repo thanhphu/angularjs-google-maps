@@ -10,23 +10,23 @@
  * @attr {String} map-lazy-load
  *    Maps api script source file location.
  *    Example:
- *      'https://maps.google.com/maps/api/js'
+ *      'https://maps.google.cn/maps/api/js'
  * @attr {String} map-lazy-load-params
  *   Maps api script source file location via angular scope variable.
  *   Also requires the map-lazy-load attribute to be present in the directive.
  *   Example: In your controller, set
- *     $scope.googleMapsURL = 'https://maps.google.com/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
+ *     $scope.googleMapsURL = 'https://maps.google.cn/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
  *
  * @example
  * Example:
  *
- *   <div map-lazy-load="http://maps.google.com/maps/api/js">
+ *   <div map-lazy-load="http://maps.google.cn/maps/api/js">
  *     <map center="Brampton" zoom="10">
  *       <marker position="Brampton"></marker>
  *     </map>
  *   </div>
  *
- *   <div map-lazy-load="http://maps.google.com/maps/api/js"
+ *   <div map-lazy-load="http://maps.google.cn/maps/api/js"
  *        map-lazy-load-params="{{googleMapsUrl}}">
  *     <map center="Brampton" zoom="10">
  *       <marker position="Brampton"></marker>

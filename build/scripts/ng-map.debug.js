@@ -2,19 +2,19 @@
  * AngularJS Google Maps Ver. 1.18.4
  *
  * The MIT License (MIT)
- * 
+ *
  * Copyright (c) 2014, 2015, 1016 Allen Kim
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
  * the Software without restriction, including without limitation the rights to
  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
  * the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -424,7 +424,7 @@ angular.module('ngMap', []);
         innerScope.$destroy();
       });
     });
-    
+
 
     /**
      * set events
@@ -775,7 +775,7 @@ angular.module('ngMap', []);
     request.travelMode = request.travelMode || 'DRIVING';
     var validKeys = [
       'origin', 'destination', 'travelMode', 'transitOptions', 'unitSystem',
-      'durationInTraffic', 'waypoints', 'optimizeWaypoints', 
+      'durationInTraffic', 'waypoints', 'optimizeWaypoints',
       'provideRouteAlternatives', 'avoidHighways', 'avoidTolls', 'region'
     ];
     if (request) {
@@ -1141,7 +1141,7 @@ angular.module('ngMap', []);
         console.log('heatmap-layer options', layer, 'events', events);
 
         mapController.addObject('heatmapLayers', layer);
-        
+
         //helper get nexted path
         function parseScope( path, obj ) {
             return path.split('.').reduce( function( prev, curr ) {
@@ -1384,7 +1384,7 @@ angular.module('ngMap', []);
  *
  * @attr {Url} url url of the kml layer
  * @attr {KmlLayerOptions} KmlLayerOptions
- *   (https://developers.google.com/maps/documentation/javascript/reference#KmlLayerOptions) 
+ *   (https://developers.google.com/maps/documentation/javascript/reference#KmlLayerOptions)
  * @attr {String} &lt;KmlLayerEvent> Any KmlLayer events,
  *   https://developers.google.com/maps/documentation/javascript/reference
  * @example
@@ -1507,23 +1507,23 @@ angular.module('ngMap', []);
  * @attr {String} map-lazy-load
  *    Maps api script source file location.
  *    Example:
- *      'https://maps.google.com/maps/api/js'
+ *      'https://maps.google.cn/maps/api/js'
  * @attr {String} map-lazy-load-params
  *   Maps api script source file location via angular scope variable.
  *   Also requires the map-lazy-load attribute to be present in the directive.
  *   Example: In your controller, set
- *     $scope.googleMapsURL = 'https://maps.google.com/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
+ *     $scope.googleMapsURL = 'https://maps.google.cn/maps/api/js?v=3.20&client=XXXXXenter-api-key-hereXXXX'
  *
  * @example
  * Example:
  *
- *   <div map-lazy-load="http://maps.google.com/maps/api/js">
+ *   <div map-lazy-load="http://maps.google.cn/maps/api/js">
  *     <map center="Brampton" zoom="10">
  *       <marker position="Brampton"></marker>
  *     </map>
  *   </div>
  *
- *   <div map-lazy-load="http://maps.google.com/maps/api/js"
+ *   <div map-lazy-load="http://maps.google.cn/maps/api/js"
  *        map-lazy-load-params="{{googleMapsUrl}}">
  *     <map center="Brampton" zoom="10">
  *       <marker position="Brampton"></marker>
@@ -1605,7 +1605,7 @@ angular.module('ngMap', []);
 /**
  * @ngdoc directive
  * @name map-type
- * @param Attr2MapOptions {service} 
+ * @param Attr2MapOptions {service}
  *   convert html attribute to Google map api options
  * @description
  *   Requires:  map directive
@@ -1819,7 +1819,7 @@ angular.module('ngMap', []);
     if (NgMap.defaultOptions.marker) {
       for (var key in NgMap.defaultOptions.marker) {
         if (typeof options[key] == 'undefined') {
-          console.log('setting default marker options', 
+          console.log('setting default marker options',
             key, NgMap.defaultOptions.marker);
           options[key] = NgMap.defaultOptions.marker[key];
         }
@@ -2122,7 +2122,7 @@ angular.module('ngMap', []);
       case "circle":
         if (!(options.center instanceof google.maps.LatLng)) {
           options.center = new google.maps.LatLng(0,0);
-        } 
+        }
         shape = new google.maps.Circle(options);
         break;
       case "polygon":
@@ -2533,10 +2533,10 @@ angular.module('ngMap', []);
       }
       return JSON.parse(jsonizeFilter(input));
     };
-    
+
     var getLatLng = function(input) {
       var output = input;
-      if (input[0].constructor == Array) { 
+      if (input[0].constructor == Array) {
         if ((input[0][0].constructor == Array && input[0][0].length == 2) || input[0][0].constructor == Object) {
             var preoutput;
             var outputArray = [];
@@ -3013,7 +3013,7 @@ angular.module('ngMap', []);
    * @memberof NavigatorGeolocation
    * @param {Object} geoLocationOptions the navigator geolocations options.
    *  i.e. { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }.
-   *  If none specified, { timeout: 5000 }. 
+   *  If none specified, { timeout: 5000 }.
    *  If timeout not specified, timeout: 5000 added
    * @param {function} success success callback function
    * @param {function} failure failure callback function
@@ -3145,13 +3145,13 @@ angular.module('ngMap', []);
    * @memberof NgMapPool
    * @function returnMapInstance
    * @param {Map} an instance of google.maps.Map
-   * @desc sets the flag inUse of the given map instance to false, so that it 
+   * @desc sets the flag inUse of the given map instance to false, so that it
    * can be reused later
    */
   var returnMapInstance = function(map) {
     map.inUse = false;
   };
-  
+
   /**
    * @memberof NgMapPool
    * @function resetMapInstances
@@ -3163,7 +3163,7 @@ angular.module('ngMap', []);
     }
     mapInstances = [];
   };
-  
+
   /**
    * @memberof NgMapPool
    * @function deleteMapInstance

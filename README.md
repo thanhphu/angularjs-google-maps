@@ -4,11 +4,11 @@ Google Maps AngularJS Directive
 [![Build Status](https://travis-ci.org/allenhwkim/angularjs-google-maps.png?branch=master)](https://travis-ci.org/allenhwkim/angularjs-google-maps)
 -->
 
-[Demo](https://ngmap.github.io)  
-[Documentation](https://rawgithub.com/allenhwkim/angularjs-google-maps/master/build/docs/index.html)  
-[Road Trip By StreetView](https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/street-view_road_trip.html)  
+[Demo](https://ngmap.github.io)
+[Documentation](https://rawgithub.com/allenhwkim/angularjs-google-maps/master/build/docs/index.html)
+[Road Trip By StreetView](https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/street-view_road_trip.html)
 [Maps Can Talk](https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/custom-marker.html) |
-[Custom Marker](https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/custom-marker-2.html)  
+[Custom Marker](https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/custom-marker-2.html)
 
 If you like this, you also may like these:
 * [ng2-map](https://github.com/ng2-ui/map) Google Maps Wrapper for Angular 2+
@@ -18,10 +18,10 @@ Background
 -----------------
 There is already [one](https://github.com/nlaplante/angular-google-maps) for this. However, I found myself taking a totally different approach than the existing one, such as:
 
-1. **Everything in tag and attributes.**   
+1. **Everything in tag and attributes.**
    Thus, users don't even need knowledge of JavaScript.
-   
-2. **Expose all original Google Maps V3 API to the user.**   
+
+2. **Expose all original Google Maps V3 API to the user.**
    No hiding, no wrapping or whatsoever.
    By doing so, programmers don't need to learn how to use this module.
    You only need to know Google Maps V3 API.
@@ -37,8 +37,8 @@ For Bower users,
 1. Include `ng-map.min.js`:
    `<script src="/bower_components/ngmap/build/scripts/ng-map.min.js"></script>`
 
-2. Include Google Maps:  
-    `<script src="http://maps.google.com/maps/api/js"></script>`  
+2. Include Google Maps:
+    `<script src="http://maps.google.cn/maps/api/js"></script>`
 
 2. Name your AngularJS app ngMap, or add it as a dependency
 
@@ -62,9 +62,9 @@ For Meteor users: https://atmospherejs.com/wormy/angularjs-google-maps
 
 Lazy loading of Google Maps JavaScript
 ---------------------------------------
-  Simply wrap the map tag with `map-lazy-load="https://maps.google.com/maps/api/js"`.
+  Simply wrap the map tag with `map-lazy-load="https://maps.google.cn/maps/api/js"`.
 
-    <div map-lazy-load="https://maps.google.com/maps/api/js">
+    <div map-lazy-load="https://maps.google.cn/maps/api/js">
       <ng-map center="41,-87" zoom="3"></ng-map>
     </div>
 
@@ -72,7 +72,7 @@ Lazy loading of Google Maps JavaScript
   variable in your controller (e.g. `$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE";`).
   This can be set from a constant value in your app to standardise the API key to pass to google for multiple controllers.
 
-    <div map-lazy-load="https://maps.google.com/maps/api/js"
+    <div map-lazy-load="https://maps.google.cn/maps/api/js"
       map-lazy-load-params="{{googleMapsUrl}}">
       <ng-map center="41,-87" zoom="3"></ng-map>
     </div>
