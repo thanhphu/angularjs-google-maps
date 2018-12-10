@@ -1955,7 +1955,7 @@ angular.module('ngMap', []);
  *
  * @example
  * Example:
- *   <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+ *   <script src="https://maps.google.cn/maps/api/js?libraries=places"></script>
  *   <input places-auto-complete types="['geocode']" on-place-changed="myCallback(place)" component-restrictions="{country:'au'}"/>
  *
  */
